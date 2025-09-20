@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/service-5.png" type="image/x-icon" />
+    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
     <title>Lind Home Remodeling</title>
     <meta name="description" content="Lind Home Remodeling provides cabinet painting, deck construction, patio remodeling, and full home remodeling services throughout Florida. Get a free estimate today!">
     <meta name="keywords" content="Florida, home remodeling, cabinet painting , deck construction, patio remodeling ">
@@ -409,50 +409,43 @@ With years of hands-on experience in painting, remodeling, and construction, we 
           loading="lazy"
         ></iframe>
 
-        <form action="https://formsubmit.co/geraldbudani@gmail.com" method="POST">
-          <h3>get in touch</h3>
-          <input type="text" placeholder="Your Name" class="box" required />
-          <input type="email" placeholder="Your Email" class="box" required />
-          <input type="number" placeholder="Your Phone" class="box" required />
-          <textarea
-            name=""
-            placeholder="Your Message"
-            class="box"
-            id=""
-            cols="30"
-            rows="10"
-            required
-          ></textarea>
-          <input type="submit" value="send message" class="btn" />
-        </form>
-        <div id="successMessage" style="display:none; padding:20px; background:#4CAF50; color:white; margin-top:15px; border-radius:5px;">
-    ✅ Thank you! Your message has been sent.
-        </div>
+        <form id="contactForm" method="POST">
+        <h3>Get in Touch</h3>
+
+        <input type="text" name="name" placeholder="Your Name" class="box" required />
+        <input type="email" name="email" placeholder="Your Email" class="box" required />
+        <input type="text" name="phone" placeholder="Your Phone" class="box" />
+        <textarea name="message" placeholder="Your Message" class="box" cols="30" rows="10" required></textarea>
+
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+
+      <div id="successMessage" style="display:none; padding:20px; background:#4CAF50; color:white; margin-top:15px; border-radius:5px;">
+        ✅ Thank you! Your message has been sent.
       </div>
+
 
       <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Stop normal submit
+        event.preventDefault(); 
 
-          const form = event.target;
-          const formData = new FormData(form);
+        const form = event.target;
+        const formData = new FormData(form);
 
-          // Send form data to FormSubmit
-          fetch('https://formsubmit.co/ajax/geraldbudani@gmail.com', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            console.log('Success:', data);
-            form.reset(); // clear fields
-            document.getElementById('successMessage').style.display = 'block';
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Something went wrong. Please try again later.');
-          });
+        fetch('https://formsubmit.co/ajax/geraldbudani@gmail.com', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          form.reset();
+          document.getElementById('successMessage').style.display = 'block';
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Something went wrong. Please try again later.');
         });
+      });
       </script>
     </section>
 
