@@ -1,0 +1,39 @@
+.back-button {
+  position: fixed;       /* stays in place while scrolling */
+  bottom: 20px;          /* distance from bottom */
+  right: 20px;           /* distance from right */
+  padding: 12px 18px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1000;         /* stays on top of other elements */
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+.more-projects {
+ 
+  margin: 30px 0;
+}
+
+.more-projects-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #e4dc41;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.more-projects-btn:hover {
+  background-color: grey;
+  transform: translateY(-2px);
+}
